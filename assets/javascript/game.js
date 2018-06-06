@@ -71,8 +71,8 @@ document.onkeyup = function(event) {
     // evaluates whether the two guesses are the same 
     // ADDITIONAL NOTE: I attempted to evaluate for duplicates, but the loop wasn't working as intended
     if (userGuess !== computerGuess) {
-        // check for duplicates
-        if (guessedLetters.indexOf(userGuess) === -1) {
+        // check for duplicates and for keys pressed that are not letters
+        if (guessedLetters.indexOf(userGuess) === -1 && computerChoices.indexOf(userGuess) !== -1) {
             guessedLetters.push(userGuess);
             guessesSoFar();
             guessesLeft--;
