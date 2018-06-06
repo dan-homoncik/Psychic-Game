@@ -84,6 +84,8 @@ document.onkeyup = function(event) {
                 alert("You are no psychic! But try again if I'm wrong!");
                 gameReset();
             };
+        } else {
+            alert("pick another letter!");
         };
     };
 };
